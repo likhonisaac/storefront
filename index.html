@@ -3,69 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storefront</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Storefront - TON Blockchain</title>
     <style>
-        /* CSS styling based on the screenshot */
+        /* CSS based on the screenshot */
 
-        /* Basic reset */
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Body and background */
         body {
             font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
+            background-color: #0d0d0d;
             color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
         }
 
-        /* Storefront container */
-        .storefront {
+        .container {
             width: 100%;
             max-width: 400px;
-            background-color: #111;
+            background-color: #121212;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
 
-        /* Header section */
         .header {
             background: linear-gradient(135deg, #ff7ee5, #3f92ff);
-            padding: 40px 20px;
             text-align: center;
-            color: #fff;
+            padding: 40px 20px;
         }
 
         .header img {
             width: 50px;
             height: 50px;
-            margin-bottom: 10px;
         }
 
         .header h1 {
-            font-size: 24px;
             margin-top: 10px;
+            font-size: 24px;
         }
 
-        /* Search and status section */
-        .status {
+        .status-indicators {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 15px;
             padding: 10px 0;
-            color: #fff;
+            background-color: #1a1a1a;
         }
 
-        .status div {
+        .status-indicators div {
             width: 25px;
             height: 25px;
             background-color: #333;
@@ -73,11 +65,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #00ff00;
+            font-size: 14px;
+            font-weight: bold;
         }
 
         .search-bar {
             padding: 10px;
+            background-color: #1a1a1a;
             text-align: center;
         }
 
@@ -85,55 +79,64 @@
             width: 90%;
             padding: 10px;
             background-color: #333;
-            color: #fff;
             border: none;
             border-radius: 5px;
-            text-align: center;
+            color: #fff;
         }
 
-        /* Product card */
         .product-card {
             background-color: #222;
             padding: 20px;
-            border-radius: 10px;
             margin: 20px;
+            border-radius: 10px;
             text-align: center;
         }
 
         .product-card img {
             width: 100%;
             border-radius: 10px;
+            margin-bottom: 10px;
         }
 
         .product-title {
             font-size: 18px;
-            margin: 10px 0;
             color: #ccc;
         }
 
         .product-price {
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 24px;
             color: #fff;
+            font-weight: bold;
         }
 
         .product-stock {
             font-size: 14px;
             color: #00ff00;
+            margin-bottom: 10px;
+        }
+
+        .buy-button {
+            padding: 10px 20px;
+            background-color: #3f92ff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
         }
 
     </style>
 </head>
 <body>
-    <div class="storefront">
-        <!-- Header -->
+    <div class="container">
+        <!-- Header Section -->
         <div class="header">
-            <img src="https://via.placeholder.com/50x50" alt="Store logo">
+            <img src="https://via.placeholder.com/50x50" alt="Logo">
             <h1>Storefront</h1>
         </div>
 
         <!-- Status Indicators -->
-        <div class="status">
+        <div class="status-indicators">
             <div style="color: #00ff00;">0</div>
             <div style="color: #00ff00;">0</div>
             <div style="color: #ff0000;">0</div>
@@ -146,11 +149,29 @@
 
         <!-- Product Card -->
         <div class="product-card">
-            <img src="https://via.placeholder.com/300x150" alt="Product Image">
+            <img src="https://via.placeholder.com/300x150" alt="Product">
             <div class="product-title">Small Product</div>
             <div class="product-price">$99.99</div>
             <div class="product-stock">∞ in stock</div>
+            <button class="buy-button" onclick="buyWithTon()">Buy with TON</button>
         </div>
     </div>
+
+    <!-- TON Integration Script -->
+    <script>
+        // Function to simulate buying with TON blockchain
+        function buyWithTon() {
+            // Placeholder for TON blockchain payment integration
+            alert("Connecting to TON blockchain...");
+            
+            // Example: Code here would connect to TON SDK
+            // TON SDK code to initiate transaction would go here
+            
+            // For actual TON integration:
+            // 1. Use TON’s official SDK (e.g., tonweb, ton-client-js).
+            // 2. Create a smart contract to handle product purchases.
+            // 3. Use the SDK to invoke a purchase transaction and confirm on the blockchain.
+        }
+    </script>
 </body>
 </html>
